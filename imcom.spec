@@ -1,6 +1,6 @@
 Name:		imcom
 Version:	1.34
-Release:	1mdk
+Release:	%mkrel 1
 Group:		Networking/Instant messaging
 License:	BSD
 Summary:	Console-based jabber client
