@@ -1,0 +1,37 @@
+--- imcom-1.33/Makefile.in.destdir	2003-07-09 01:37:40.000000000 +0200
++++ imcom-1.33/Makefile.in	2004-07-21 17:52:36.276961608 +0200
+@@ -12,22 +12,22 @@
+ install: install-bin install-doc
+ 
+ install-bin: install-modules
+-	install -d -m 0755 ${bindir}
+-	install -m 0755 imcom ${bindir}
++	install -d -m 0755 $(DESTDIR)${bindir}
++	install -m 0755 imcom $(DESTDIR)${bindir}
+ 
+ install-modules:
+-	install -d -m 0755 ${datadir}/imcom
+-	install -d -m 0755 ${datadir}/imcom/modules
+-	install -m 0644 *.py ${datadir}/imcom
+-	install -m 0644 modules/*.py ${datadir}/imcom/modules
+-	install -m 0755 CLI.py LogHandler.py AccountCreator.py ${datadir}/imcom
++	install -d -m 0755 $(DESTDIR)${datadir}/imcom
++	install -d -m 0755 $(DESTDIR)${datadir}/imcom/modules
++	install -m 0644 *.py $(DESTDIR)${datadir}/imcom
++	install -m 0644 modules/*.py $(DESTDIR)${datadir}/imcom/modules
++	install -m 0755 CLI.py LogHandler.py AccountCreator.py $(DESTDIR)${datadir}/imcom
+ 
+ install-doc:
+-	install -d -m 0755 ${docdir}
+-	install -d -m 0755 ${mandir}/man1
+-	install -m 0755 docs/*.html ${docdir}
+-	install -m 0755 CONTRIBUTORS LICENSE README README.autostatus TODO WHATSNEW ${docdir}
+-	install -m 0755 docs/imcom.1 ${mandir}/man1/imcom.1
++	install -d -m 0755 $(DESTDIR)${docdir}
++	install -d -m 0755 $(DESTDIR)${mandir}/man1
++	install -m 0755 docs/*.html $(DESTDIR)${docdir}
++	install -m 0755 CONTRIBUTORS LICENSE README README.autostatus TODO WHATSNEW $(DESTDIR)${docdir}
++	install -m 0755 docs/imcom.1 $(DESTDIR)${mandir}/man1/imcom.1
+ 
+ 
+ uninstall:
