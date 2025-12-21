@@ -6,6 +6,11 @@ License:	BSD
 Summary:	Console-based jabber client
 #URL:		http://imcom.floobin.cx/
 BuildRoot:	%{_tmppath}/%{name}-%{version}-root
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 BuildRequires:	python-devel
 Source:		http://nafai.dyndns.org/files/%{name}-%{version}.tar.bz2
 Patch:		imcom-1.33-destdir.patch
